@@ -1,4 +1,4 @@
-﻿Siswa siswaObj = new Siswa("Bias","bias@gmail.com","12345","siswa", "XPG3");)
+﻿Siswa siswaObj = new Siswa("Bias","bias@gmail.com","12345","siswa", "XPG3");
 Guru guruObj = new Guru("Danisa", "danisa@gmail.com", "54321", "guru", "Matematika");
 
 siswaObj.TampilkanInfo();
@@ -29,13 +29,13 @@ class Siswa : User
 {
     public string ClassName;
 
-    public Siswa(string nama, string email, string password, string className) : base (nama, email, password, className)
+    public Siswa(string nama, string email, string password, string role, string className) : base (nama, email, password, role)
     {
         ClassName = className;
     }
     public void SumbiTugas()
     {
-        Console.WriteLine($"{nama}dari kelas {className} sudah ngumpulkan tugas");
+        Console.WriteLine($"{nama} dari kelas {ClassName} sudah ngumpulkan tugas");
     }
 }
   
@@ -44,7 +44,7 @@ class Guru : User
 { 
     public string Mapel;
 
-    public Guru(string nama, string email, string password, string mapel) : base (nama, email, password, mapel)
+    public Guru(string nama, string email, string password, string role, string mapel) : base (nama, email, password, role  )
     {
         Mapel = mapel;
     }
